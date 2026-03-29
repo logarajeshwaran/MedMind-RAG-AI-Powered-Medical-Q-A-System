@@ -1,7 +1,7 @@
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 
-load_env()
+load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -10,14 +10,14 @@ DATA_DIR = os.path.join(BASE_DIR,"data")
 VECTORSTORE_DIR = os.path.join(BASE_DIR,"vectorstore")
 
 
-EMBDEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBDEDDING_MODEL = "all-MiniLM-L12-v2"
 
 FAISS_INDEX_PATH = os.path.join(VECTORSTORE_DIR,"faiss.index")
 FAISS_METADATA_PATH = os.path.join(VECTORSTORE_DIR,"metadata.pkl")
 
 
 LLM = "gpt-4o"
-MAX_TOKENS = "1024"
+MAX_TOKENS = 1024
 
 TOP_K_RESULT = 5
 CHUNK_SIZE = 500
